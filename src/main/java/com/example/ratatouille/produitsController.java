@@ -1,5 +1,6 @@
 package com.example.ratatouille;
 
+
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -13,8 +14,7 @@ import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-
-
+import modele.Produits;
 
 
 import java.io.IOException;
@@ -91,7 +91,11 @@ public class produitsController {
 
     @FXML
     private void initialize() {
+        Produits produitInstance = new Produits();
         typeProduit.getItems().addAll("Legumes","Fruits","Viandes","Fruit", "Viennoiserie", "Féculents", "Légumineuse");
+        nomProduit.textProperty().bindBidirectional(produitInstance.nomProduitProperty);
+        ///
+
     }
 
 
