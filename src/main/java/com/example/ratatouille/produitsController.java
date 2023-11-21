@@ -92,7 +92,7 @@ public class produitsController {
     @FXML
     private void initialize() {
         Produits produitInstance = new Produits();
-        typeProduit.getItems().addAll("Legumes","Fruits","Viandes","Fruit", "Viennoiserie", "Féculents", "Légumineuse");
+        typeProduit.getItems().addAll("Legumes","Fruits","Viandes","Fruit", "Viennoiserie", "Féculents", "Légumineuse" ,"Pains");
         nomProduit.textProperty().bindBidirectional(produitInstance.nomProduitProperty);
         ///
 
