@@ -75,14 +75,14 @@ public class TableauDeBordController {
         stage.setScene(scene); // Définir la nouvelle scène sur la fenêtre
         stage.show();
     }
-    @FXML
-    void switchToAccueil(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene); // Définir la nouvelle scène sur la fenêtre
-        stage.show();
-    }
+//    @FXML
+//    void switchToAccueil(ActionEvent event) throws IOException {
+//        Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+//        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//        Scene scene = new Scene(root);
+//        stage.setScene(scene); // Définir la nouvelle scène sur la fenêtre
+//        stage.show();
+//    }
     @FXML
     void switchToProduits(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("produits.fxml"));

@@ -6,68 +6,105 @@ import javafx.collections.ObservableList;
 
 public class Produits {
     public StringProperty nomProduitProperty;
-    public FloatProperty prixProduitProperty;
-    public  FloatProperty prixProduit1Property;
+    public StringProperty prixProduitProperty;
+    public StringProperty prixProduit1Property;
     public StringProperty refProduitProperty;
     public StringProperty typeProduitProperty;
-    public IntegerProperty qteProduitProperty;
+    public StringProperty qteProduitProperty;
 
 
     public Produits(){
         this.nomProduitProperty = new SimpleStringProperty();
-        this.prixProduitProperty = new SimpleFloatProperty();
-        this.qteProduitProperty = new SimpleIntegerProperty();
+        this.prixProduitProperty = new SimpleStringProperty();
+        this.qteProduitProperty = new SimpleStringProperty();
         this.refProduitProperty = new SimpleStringProperty();
-        this.prixProduit1Property = new SimpleFloatProperty();
+        this.prixProduit1Property = new SimpleStringProperty();
         this.typeProduitProperty = new SimpleStringProperty();
     }
 
-    // GETTERS
-    public String getNomProduit() {
-        return nomProduitProperty.get();
+
+    public Produits(String nomProduit, String prixProduit, String refProduit, String typeProduit, String prixProduit1) {
+        this.nomProduitProperty = new SimpleStringProperty(nomProduit);
+        this.prixProduitProperty = new SimpleStringProperty(refProduit);
+        this.qteProduitProperty = new SimpleStringProperty(typeProduit);
+        this.refProduitProperty = new SimpleStringProperty(prixProduit);
+        this.prixProduit1Property = new SimpleStringProperty(prixProduit1);
+        this.typeProduitProperty = new SimpleStringProperty(typeProduit);  // Ajoutez cette ligne pour initialiser la propriété
     }
 
-    public float getPrixProduit() {
+
+
+
+    public StringProperty getNomProduitProperty() {
+        return nomProduitProperty;
+    }
+
+    public StringProperty nomProduitPropertyProperty() {
+        return nomProduitProperty;
+    }
+
+    public void setNomProduitProperty(String nomProduitProperty) {
+        this.nomProduitProperty.set(nomProduitProperty);
+    }
+
+    public String getPrixProduitProperty() {
         return prixProduitProperty.get();
     }
 
-    public float getPrixProduit1() {
+    public StringProperty prixProduitPropertyProperty() {
+        return prixProduitProperty;
+    }
+
+    public void setPrixProduitProperty(String prixProduitProperty) {
+        this.prixProduitProperty.set(prixProduitProperty);
+    }
+
+    public String getPrixProduit1Property() {
         return prixProduit1Property.get();
     }
 
-    public String getRefProduit() {
+    public StringProperty prixProduit1PropertyProperty() {
+        return prixProduit1Property;
+    }
+
+    public void setPrixProduit1Property(String prixProduit1Property) {
+        this.prixProduit1Property.set(prixProduit1Property);
+    }
+
+    public String getRefProduitProperty() {
         return refProduitProperty.get();
     }
 
-    public String getTypeProduit() {
+    public StringProperty refProduitPropertyProperty() {
+        return refProduitProperty;
+    }
+
+    public void setRefProduitProperty(String refProduitProperty) {
+        this.refProduitProperty.set(refProduitProperty);
+    }
+
+    public String getTypeProduitProperty() {
         return typeProduitProperty.get();
     }
 
-    public int getQteProduit() {
+    public StringProperty typeProduitPropertyProperty() {
+        return typeProduitProperty;
+    }
+
+    public void setTypeProduitProperty(String typeProduitProperty) {
+        this.typeProduitProperty.set(typeProduitProperty);
+    }
+
+    public String getQteProduitProperty() {
         return qteProduitProperty.get();
     }
 
-    // SETTERS
-    public void setNomProduit(String nomProduit) {
-        this.nomProduitProperty.set(nomProduit);
+    public StringProperty qteProduitPropertyProperty() {
+        return qteProduitProperty;
     }
 
-    public void setPrixProduit(float prixProduit) {
-        this.prixProduitProperty.set(prixProduit);
+    public void setQteProduitProperty(String qteProduitProperty) {
+        this.qteProduitProperty.set(qteProduitProperty);
     }
-
-    public void setPrixProduit1(float prixProduit1) {
-        this.prixProduit1Property.set(prixProduit1);
-    }
-
-    public void setRefProduit(String refProduit) {
-        this.refProduitProperty.set(refProduit);
-    }
-
-
-
-
-
-
 
 }
